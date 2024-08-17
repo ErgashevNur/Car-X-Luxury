@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v21-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/poppins-v21-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/poppins-v21-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/poppins-v21-latin-700.woff2") format("woff2");
+}
+
+:root {
+  --bg-color: #ffffff;
+  --color-text: #101825;
+  --gray-color: rgb(111, 111, 111);
+  --light-gray-color: rgb(176, 176, 176);
+  --footer-bg-color: rgb(203, 211, 215);
+}
+
+.dark-mode {
+  --bg-color: #1c1c1c;
+  --color-text: #ffffff;
+  --footer-bg-color: rgb(20, 20, 20);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.container {
+  width: 1480px;
+  margin: auto;
+  padding: 0 50px;
+}
+
+nav {
+  padding: 20px 0;
+  border-bottom: 1px solid gray;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-bar img {
+  width: 150px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 21.98px;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+button:hover {
+  box-shadow: 0px 0px 45px 5px var(--color-text);
+  background-color: var(--color-text);
+  color: var(--bg-color);
+  font-size: 15px;
+  line-height: 25px;
+  padding: 13px 38px;
+  border: none;
+}
+
+button:active {
+  background-color: var(--bg-color);
+  color: var(--color-text);
+}
+
+button {
+  cursor: pointer;
+  padding: 15px 28px;
+  border-radius: 20px;
+  background-color: var(--bg-color);
+  color: var(--color-text);
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+#theme-switch {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: var(--color-button);
+  color: var(--color-text);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+#theme-switch:hover {
+  box-shadow: 0px 0px 45px 5px var(--color-text);
+  background-color: var(--bg-color);
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#theme-switch:active {
+  background-color: var(--bg-color);
+}
+
+#theme-switch {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#theme-switch svg {
+  fill: rgb(86, 103, 227);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.dark-mode #theme-switch svg:first-child {
+  display: none;
+}
+.dark-mode #theme-switch svg:last-child {
+  display: block;
+}
+
+.slider {
+  width: 100%;
+  height: 85vh;
+  background: url(../img/brabus-akula.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: auto;
+  animation: slide 20s infinite;
+}
+
+@keyframes slide {
+  20% {
+    background: url(../img/tahoe.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 85vh;
+  }
+  40% {
+    background: url(../img/Nissan-GTR-R35.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 85vh;
+  }
+  60% {
+    background: url(../img/Malibu-2-premier.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 85vh;
+  }
+  80% {
+    background: url(../img/kia-k5.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 85vh;
+  }
+  100% {
+    background: url(../img/sarento.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 85vh;
+  }
+}
+
+#Catigories h2 {
+  font-size: 32px;
+  line-height: 25px;
+  margin-top: 120px;
+  margin-left: 50px;
+  color: var(--color-text);
+}
+
+p.comment {
+  font-size: 22px;
+  line-height: 25px;
+  margin-top: 15px;
+  margin-left: 50px;
+  color: var(--color-text);
+}
+
+.active-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.active-box img {
+  width: 400px;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+.active-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.box-in-box h3 {
+  font-size: 25px;
+  color: var(--color-text);
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+
+.box-in-box p {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+  margin-left: 0;
+  color: var(--gray-color);
+}
+
+strong {
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 700;
+  color: var(--color-text);
+  position: relative;
+  top: 10px;
+}
+
+.buy-button {
+  padding: 8px 20px;
+  position: relative;
+  left: 10px;
+  top: 0px;
+}
+
+.bmw {
+  position: relative;
+  left: -10px;
+}
+
+.gelik {
+  position: relative;
+  left: 6px;
+}
+
+section#Catigories {
+  padding: 10px;
+}
+
+.about {
+  margin-bottom: 100px;
+  font-size: 25px;
+}
+
+.brands img {
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+footer {
+  background-color: var(--footer-bg-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  color: var(--color-text);
+}
+
+.logo-section img {
+  width: 100px;
+  position: relative;
+  right: -30px;
+}
+
+section {
+  margin: auto;
+}
+
+a.footer-a-href {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
